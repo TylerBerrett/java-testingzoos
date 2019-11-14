@@ -189,7 +189,7 @@ public class ZooControllerTest {
 
         String apiUrl = "/zoos/zoo/{zooid}/animals/{animalid}";
 
-        RequestBuilder rb = MockMvcRequestBuilders.delete(apiUrl, "100","7")
+        RequestBuilder rb = MockMvcRequestBuilders.put(apiUrl, "100","7")
                 .contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON);
         mockMvc.perform(rb).andExpect(status().isOk()).andDo(MockMvcResultHandlers.print());
 
